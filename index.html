@@ -11,7 +11,9 @@
       --primary-color: #ff4d6d;
       --secondary-color: #ff8fab;
     }
-
+    .popup {
+            display: none;
+        }
     body {
       font-family: 'Roboto', sans-serif;
       scroll-behavior: smooth;
@@ -94,6 +96,22 @@
   </style>
 </head>
 <body class="bg-gray-50">
+<div id="popup" class="popup  fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
+    <!-- Popup Content -->
+    <div class="bg-white p-8 relative rounded-lg shadow-lg w-96">
+        <h2 class="text-lg font-semibold mb-4">Có nhớ anh không</h2>
+        <div class="flex justify-between">
+            <button id="yesBtn" class="bg-black text-white py-2 px-4 rounded-lg">Có</button>
+            <button id="noBtn" class="bg-pink-500 text-white py-2 px-4 rounded-lg">Không thèm</button>
+        </div>
+        <div class="absolute w-10 -top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 rounded-full border-2 border-pink-500 overflow-hidden shadow-lg">
+            <img class="w-full h-full object-cover" src="img/nghiavu.jpg" alt="Ảnh">
+        </div>
+    </div>
+
+    <!-- Image positioned at the top center -->
+    
+</div>
 
   <!-- Hero Section -->
   <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
@@ -290,6 +308,28 @@
     }, { threshold: 0.1 });
   
     scrollElements.forEach(el => observer.observe(el));
+    let scaleFactor = 1; // Khởi tạo yếu tố tỷ lệ ban đầu
+        let scaleFactor2 = 1;
+        // Hiển thị popup khi trang tải
+        window.onload = () => {
+            document.getElementById('popup').classList.add('popup-show');
+        };
+
+        // Sự kiện khi nhấn nút Yes
+        document.getElementById('yesBtn').addEventListener('click', () => {
+            console.log('yesBtn clicked');
+            document.getElementById('popup').classList.add('hidden');  // Tắt popup
+        });
+
+        // Sự kiện khi nhấn nút No
+        document.getElementById('noBtn').addEventListener('click', () => {
+            scaleFactor += 0.1;  // Tăng tỷ lệ mỗi lần bấm "No"
+            scaleFactor2 -= 0.1; 
+            const yesButton = document.getElementById('yesBtn');
+            const noButton = document.getElementById('noBtn');
+            yesButton.style.transform = `scale(${scaleFactor})`; // Áp dụng tỷ lệ mới
+            noButton.style.transform = `scale(${scaleFactor2})`;
+        });
   </script>
   
 </body>
