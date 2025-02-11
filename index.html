@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>3107</title>
+  <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      --primary-color: #ff4d6d;
+      --secondary-color: #ff8fab;
+    }
+
+    body {
+      font-family: 'Roboto', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    .story-card {
+      perspective: 1000px;
+      transition: transform 0.3s;
+    }
+
+    .story-content {
+      transform-style: preserve-3d;
+      backface-visibility: hidden;
+    }
+
+    .fade-in scroll-animation {
+      animation: fadeIn 1s ease-in;
+    }
+
+    .polaroid-effect {
+      background: white;
+      padding: 0.5rem;
+      box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+      transform: rotate(-2deg);
+    }
+
+    .polaroid-effect:nth-child(even) {
+      transform: rotate(2deg);
+    }
+
+    .image-grid {
+      display: grid;
+      gap: 1rem;
+    }
+
+    .image-grid-1 {
+      grid-template-columns: 1fr;
+    }
+
+    .image-grid-2 {
+      grid-template-columns: repeat(2, 1fr);
+    }
+
+    .image-grid-3 {
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(2, 200px);
+    }
+
+    .image-grid-3 img:first-child {
+      grid-column: 1 / -1;
+    }
+
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
+    }
+
+    @media (min-width: 768px) {
+      .image-grid-3 {
+        grid-template-columns: repeat(3, 1fr);
+        grid-template-rows: 1fr;
+      }
+      .image-grid-3 img:first-child {
+        grid-column: auto;
+      }
+    }
+    /* Ẩn phần tử trước khi xuất hiện */
+.scroll-animation {
+  opacity: 0;
+  transform: translateY(50px);
+  transition: opacity 0.8s ease-out, transform 0.8s ease-out;
+}
+
+/* Khi phần tử xuất hiện trong màn hình */
+.scroll-animation.show {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+  </style>
+</head>
+<body class="bg-gray-50">
+
+  <!-- Hero Section -->
+  <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+    <div class="absolute inset-0 bg-black/60 z-10"></div>
+    <img src="/img/totuong.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover object-center">
+    <div class="relative z-20 text-center px-4 space-y-6">
+      <h1 class="text-6xl md:text-8xl font-bold text-white animate-pulse" style="font-family: 'Great Vibes', cursive; text-shadow: 0 2px 4px rgba(0,0,0,0.3);">
+        Tình Yêu Mãi Mãi
+      </h1>
+      <p class="text-xl text-pink-200 max-w-2xl mx-auto leading-relaxed">
+        "Hành trình của chúng ta sẽ vượt thời gian và thử thách"
+      </p>
+    </div>
+  </section>
+  <section class="py-8 px-4 bg-gradient-to-r  from-pink-300 to-purple-400">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 gap-4">
+
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/babe1.jpg" alt="Kỷ niệm 1">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/we1.jpg" alt="Kỷ niệm 2">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/we2.jpg" alt="Kỷ niệm 3">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/hoa.jpg" alt="Kỷ niệm 4">
+      </div>
+    </div>
+  </section>
+  <!-- Story Sections -->
+  <section class="py-16 px-4 bg-white fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-1 mb-8">
+          <img src="/img/cat.jpg" alt="Kỷ niệm" class="w-full h-96 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 mb-6" style="font-family: 'Great Vibes'">Chuyện Tình Cổ Tích</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Anh cảm thấy may mắn vì ngày đó em đã mở lời đến bên anh, phép màu đã xảy ra, anh si mê em vì sự đáng yêu, đến giờ vẫn vậy. Em như là thiên thân mang đến cho cuộc sống mờ nhạt của anh nhiều khung bậc cảm xúc, dạy cho anh biết yêu là gì.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-pink-50 fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-2 gap-4 mb-8">
+          <img src="/img/nho.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/tay.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 mb-6" style="font-family: 'Great Vibes'">Trở Ngại</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Em còn quả nhỏ, anh chưa từng yêu ai, bất đồng quan điểm là điều ko thể tránh, nhưng cả 2 vẫn dành cho nhau sự tôn trọng, thấu hiểu và lắng nghe, đã có đổ vỡ những tình yêu của chúng mình to lớn và đủ mạnh mẽ hơn nhiều.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100 fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-3 gap-4 mb-8">
+          <img src="/img/2to.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/head1.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/weee.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 block mt-14 mb-5" style="font-family: 'Great Vibes'">Đồng hành cùng nhau</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Em thì vào trường cao đăng, anh thì sắp ra trường, cả 2 điều bận rộn với cuộc sống, nhưng vẫn thấy hạnh phúc vì được ở bên cạnh đúng người là đủ. Anh đi làm em cũng làm thêm, cuộc sống đã có nhiều thứ hơn để giải quyết, nhưng tình yêu này vẫn được cả 2 quan tâm và vun đắp, anh vẫn nhớ mỗi lần đi làm về qua chở em đi dạo đi ăn rồi về.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  
+  <section class="py-16 px-4 bg-pink-50 fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-2 gap-4 mb-8">
+          <img src="/img/kho.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/cute.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 block mt-14 mb-5" style="font-family: 'Great Vibes'">Thay đổi</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Anh không thể tiếp tục với nghề vì sức khỏe và không có cơ hội thăng tiến, anh quyết định lựa chọn lĩnh vực mà anh tự tin và là lựa chọn với nhiều hoài bão, nước mắt của cả 2 đã rơi, em cũng chọn thấu hiểu cho anh vì vậy em luôn là mục tiêu mà anh hướng tới, là động lực cho năng lượng trong anh.
+        </p>
+      </div>
+    </div>
+  </section>
+
+  <section class="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100 fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-3 gap-4 mb-8">
+          <img src="/img/bc.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/hoa.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/bae23.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 block mt-14 mb-5" style="font-family: 'Great Vibes'">Biến Cố</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Chuyện của em và đạt, anh cũng không biết phải nói gì nữa, nhưng lại là vào sinh nhật của anh và gần tết. Anh tuyệt vọng vì không thể làm được gì 
+        </p>
+      </div>
+    </div>
+  </section>
+  
+
+
+  <section class="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100 fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-3 gap-4 mb-8">
+          <img src="/img/387350216_2110359989302174_5550403181883530430_n.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/babe1.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/we1.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 block mt-14 mb-5" style="font-family: 'Great Vibes'">Mình lại ở về với nhau</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Em đã cho anh 1 cơ hội được thay đổi, anh thấy hạnh phúc và trân trọng em hơn bao giờ hết, anh thấy vui vì ba mẹ anh nhìn nhận em rất ưng, em thì lễ phép với ba mẹ anh. Em vào Sài Gòn ở với anh, khoảng thời gian này mình đã gần như là ở với nhau mà không hề phát sinh điều gì xấu, anh hạnh phúc lắm
+        </p>
+      </div>
+    </div>
+  </section>
+  <section class="py-16 px-4 bg-pink-50 fade-in scroll-animation">
+    <div class="max-w-4xl mx-auto story-card">
+      <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
+        <div class="image-grid image-grid-2 gap-4 mb-8">
+          <img src="https://i.ytimg.com/vi/V5GS5ANG96M/maxresdefault.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+          <img src="/img/Untitled-1.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        </div>
+        <h2 class="text-4xl text-center text-pink-600 mb-6" style="font-family: 'Great Vibes'">Dừng lại</h2>
+        <p class="text-gray-700 text-lg leading-relaxed mb-6">
+            Sau 1 năm hạnh phúc, có lẽ em đã mệt, cũng có lẽ anh không đủ tốt. Em tử tế đến đau lòng, anh cũng không thể ích kỷ mãi, chấp nhận rời bỏ để em được hạnh phúc, nhưng thật khó những ngày qua anh như mất nguồn sống...
+        </p>
+      </div>
+    </div>
+  </section>
+  <!-- Interactive Timeline -->
+  <section class="py-16 px-4 bg-white">
+    <div class="max-w-2xl mx-auto relative">
+      <div class="absolute left-1/2 w-1 bg-pink-200 h-full transform -translate-x-1/2"></div>
+      
+      <!-- Timeline Item -->
+      <div class="mb-12 relative z-10">
+        <div class="bg-pink-600 w-8 h-8 rounded-full absolute left-1/2 -translate-x-1/2"><img src="" alt=""></div>
+        <div class="mt-12 bg-white p-6 rounded-xl shadow-lg border border-pink-100">
+          <h3 class="text-2xl font-bold text-pink-600 mb-2">Em là người quan trọng nhất trong trái tim này</h3>
+          <p class="text-gray-600">Hãy quay trở về bên anh nhé</p>
+        </div>
+      </div>
+
+      <!-- Add more timeline items here -->
+    </div>
+  </section>
+  <section class="py-8 px-4 bg-gradient-to-r  from-pink-300 to-purple-400">
+    <div class="max-w-4xl mx-auto grid grid-cols-2 gap-4">
+
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/387350216_2110359989302174_5550403181883530430_n.jpg" alt="Kỷ niệm 1">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/texe.jpg" alt="Kỷ niệm 4">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/hoa2.jpg" alt="Kỷ niệm 3">
+      </div>
+      <div class="overflow-hidden rounded-lg shadow-xl">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="/img/trasua.jpg" alt="Kỷ niệm 2">
+      </div>
+    </div>
+  </section>
+  <!-- Footer -->
+  <footer class="py-12 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
+    <div class="max-w-4xl mx-auto text-center">
+      <h3 class="text-3xl font-bold mb-4" style="font-family: 'Great Vibes'">Mãi Yêu Em</h3>
+      <p class="opacity-90">Dù thế giới có thay đổi, trái tim này vẫn thuộc về em</p>
+    </div>
+  </footer>
+  <script>
+    // Lấy tất cả phần tử có class 'scroll-animation'
+    const scrollElements = document.querySelectorAll('.scroll-animation');
+  
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show'); // Thêm class khi phần tử vào view
+          observer.unobserve(entry.target);   // Chỉ kích hoạt hiệu ứng 1 lần
+        }
+      });
+    }, { threshold: 0.1 });
+  
+    scrollElements.forEach(el => observer.observe(el));
+  </script>
+  
+</body>
+</html>
