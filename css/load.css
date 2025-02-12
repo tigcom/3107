@@ -1,0 +1,32 @@
+/* From Uiverse.io by jeremyssocial */ 
+@keyframes blinkCursor {
+    50% {
+      border-right-color: transparent;
+    }
+  }
+  
+  @keyframes typeAndDelete {
+    0%,
+    10% {
+      width: 0;
+    }
+    45%,
+    55% {
+      width:110px;
+    } /* adjust width based on content */
+    90%,
+    100% {
+      width: 0;
+    }
+  }
+
+  .textc {
+    
+    white-space: nowrap;
+    overflow: hidden;
+    border-right: 0.2em solid rgb(211, 0, 162); /* Cursor */
+    animation:
+      typeAndDelete 6s steps(15) infinite,
+      blinkCursor 0.2s step-end infinite alternate;
+  }
+  

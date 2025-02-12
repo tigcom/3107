@@ -6,6 +6,7 @@
   <title>3107</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
   <script src="https://cdn.tailwindcss.com"></script>
+  <link rel="stylesheet" href="css/load.css" type="text/css">
   <style>
     :root {
       --primary-color: #ff4d6d;
@@ -104,25 +105,42 @@
     audio.play();
     audio.volume =0.5;
 </script>
+
+
 <div id="popup" class="popup  fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
-    <!-- Popup Content -->
+ 
+
     <div class="bg-white p-8 relative rounded-lg shadow-lg w-96">
-        <h2 class="text-lg font-semibold mb-4">Có nhớ anh không</h2>
-        <div class="flex justify-between">
+        <h2 id="title1" class="text-lg font-semibold mb-4 ">Có nhớ anh không</h2>
+        <div id="btn1" class="flex justify-between">
             <button id="yesBtn" class="bg-black text-white py-2 px-4 rounded-lg">Có</button>
             <button id="noBtn" class="bg-pink-500 text-white py-2 px-4 rounded-lg">Không thèm</button>
         </div>
-        <div class="absolute w-10 -top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 rounded-full border-2 border-pink-500 overflow-hidden shadow-lg">
+        <div id="img1" class="absolute w-10 -top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 rounded-full border-2 border-pink-500 overflow-hidden shadow-lg">
             <img class="w-full h-full object-cover" src="img/nghiavu.jpg" alt="Ảnh">
         </div>
+        
     </div>
-
-    <!-- Image positioned at the top center -->
+    <div id="type1" class="hidden bg-white rounded-lg absolute p-2 border-4 border-pink-200 border-dotted">
+      <div class="textc text-pink-400">Anh cũng vậy...</div>
+    </div>
     
 </div>
 
   <!-- Hero Section -->
   <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
+<div class="terminal-loader">
+  <div class="terminal-header">
+    <div class="terminal-title">Status</div>
+    <div class="terminal-controls">
+      <div class="control close"></div>
+      <div class="control minimize"></div>
+      <div class="control maximize"></div>
+    </div>
+  </div>
+  <div class="text">Anh cũng vậy...</div>
+</div>
+
     <div class="absolute inset-0 bg-black/60 z-10"></div>
     <img src="img/totuong.jpg" alt="Hero Image" class="absolute inset-0 w-full h-full object-cover object-center">
     <div class="relative z-20 text-center px-4 space-y-6">
@@ -326,8 +344,12 @@
 
         // Sự kiện khi nhấn nút Yes
         document.getElementById('yesBtn').addEventListener('click', () => {
+          document.getElementById('title1').classList.add('hidden');  
+          document.getElementById('btn1').classList.add('hidden');  
+          document.getElementById('img1').classList.add('hidden');  
+          document.getElementById('type1').classList.remove('hidden'); 
+            setInterval(() => {document.getElementById('popup').classList.add('hidden');  }, 6000);
             
-            document.getElementById('popup').classList.add('hidden');  // Tắt popup
         });
 
         // Sự kiện khi nhấn nút No
