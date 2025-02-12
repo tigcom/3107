@@ -96,10 +96,14 @@
   </style>
 </head>
 <body class="bg-gray-50">
-  <audio autoplay loop>
-    <source src="https://stream.nct.vn/NhacCuaTui980/Tonight-Demxntia-5941057.mp3?st=SPwafVDjQnvjnlJ3i7EU4Q&e=1739945200&a=1&p=0&r=5264c8e94f68ea2c" type="audio/mp3">
+  <audio id="myAudio" autoplay loop>
+    <source src="mp3/Tonight-Demxntia-5941057.mp3" type="audio/mp3">
   </audio>
-  
+  <script>
+    var audio = document.getElementById("myAudio");
+    audio.play();
+    audio.volume =0.5;
+</script>
 <div id="popup" class="popup  fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
     <!-- Popup Content -->
     <div class="bg-white p-8 relative rounded-lg shadow-lg w-96">
