@@ -100,11 +100,7 @@
   <audio id="myAudio" loop>
     <source src="mp3/Tonight-Demxntia-5941057.mp3" type="audio/mp3">
   </audio>
-  <script>
-    var audio = document.getElementById("myAudio");
-    audio.play();
-    audio.volume =0.5;
-</script>
+
 
 
 <div id="popup" class="popup  fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
@@ -344,6 +340,9 @@
 
         // Sự kiện khi nhấn nút Yes
         document.getElementById('yesBtn').addEventListener('click', () => {
+          var audio = document.getElementById("myAudio");
+    audio.play();
+    audio.volume =0.5;
           document.getElementById('title1').classList.add('hidden');  
           document.getElementById('btn1').classList.add('hidden');  
           document.getElementById('img1').classList.add('hidden');  
@@ -361,6 +360,7 @@
             yesButton.style.transform = `scale(${scaleFactor})`; // Áp dụng tỷ lệ mới
             noButton.style.transform = `scale(${scaleFactor2})`;
         });
+   
   </script>
   
 </body>
