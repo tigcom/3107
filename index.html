@@ -5,7 +5,8 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>3107</title>
   <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Roboto:wght@400;700&display=swap" rel="stylesheet">
-  <script src="https://cdn.tailwindcss.com"></script>
+  <script
+  src="https://cdn.tailwindcss.com?plugins=forms,typography,aspect-ratio,line-clamp,container-queries"></script>
   <link rel="stylesheet" href="css/load.css" type="text/css">
   <style>
     :root {
@@ -102,7 +103,6 @@
   </audio>
 
 
-
 <div id="popup" class="popup  fixed inset-0 bg-gray-500 bg-opacity-75 flex justify-center items-center z-50">
  
 
@@ -112,16 +112,16 @@
             <button id="yesBtn" class="bg-black text-white py-2 px-4 rounded-lg">Có</button>
             <button id="noBtn" class="bg-pink-500 text-white py-2 px-4 rounded-lg">Không thèm</button>
         </div>
-        <div id="img1" class="absolute w-10 -top-4 left-1/2 transform -translate-x-1/2 -translate-y-1/4 rounded-full border-2 border-pink-500 overflow-hidden shadow-lg">
-            <img class="w-full h-full object-cover" src="img/nghiavu.jpg" alt="Ảnh">
+        <div id="img1" class="absolute w-12 border-double h-20 -top-7 left-1/2 transform -translate-x-1/2 -translate-y-1/4 rounded-full border-8 border-pink-500 overflow-hidden shadow-lg">
+            <img class="w-full h-full object-cover" src="img/ql3.jpg" alt="Ảnh">
         </div>
         
     </div>
     <div id="type1" class="hidden bg-white rounded-lg absolute p-2 border-4 border-pink-200 border-dotted">
-      <div class="textc text-pink-400">Anh cũng vậy...</div>
+      <div id="mess" class="textc text-pink-400">Anh cũng vậy...👉👈</div>
     </div>
     
-</div>
+</div> 
 
   <!-- Hero Section -->
   <section class="relative h-[80vh] flex items-center justify-center overflow-hidden">
@@ -134,7 +134,7 @@
       <div class="control maximize"></div>
     </div>
   </div>
-  <div class="text">Anh cũng vậy...</div>
+  <div class="text"></div>
 </div>
 
     <div class="absolute inset-0 bg-black/60 z-10"></div>
@@ -161,7 +161,7 @@
         <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/we2.jpg" alt="Kỷ niệm 3">
       </div>
       <div class="overflow-hidden rounded-lg shadow-xl">
-        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/hoa.jpg" alt="Kỷ niệm 4">
+        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/nghiavu.jpg" alt="Kỷ niệm 4">
       </div>
     </div>
   </section>
@@ -248,12 +248,18 @@
   <section class="py-16 px-4 bg-gradient-to-r from-pink-100 to-purple-100 fade-in scroll-animation">
     <div class="max-w-4xl mx-auto story-card">
       <div class="story-content bg-white rounded-2xl p-8 shadow-lg border border-pink-100">
-        <div class="image-grid image-grid-3 gap-4 mb-8">
-          <img src="img/387350216_2110359989302174_5550403181883530430_n.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
-          <img src="img/babe1.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
-          <img src="img/we1.jpg" alt="Kỷ niệm" class="w-full h-64 object-cover rounded-xl polaroid-effect">
+        <div class="grid grid-cols-4 gap-4 mb-8">
+          <img src="img/aaaa.png" alt="Kỷ niệm" class="col-span-2 row-span-2 w-full object-cover rounded-xl polaroid-effect">
+          
+          <img src="img/eww.jpg" alt="Kỷ niệm" class="w-full object-cover rounded-xl polaroid-effect">
+          <img src="img/Untitled-2.jpg" alt="Kỷ niệm" class="w-full object-cover rounded-xl polaroid-effect">
+          
+          <img src="img/ql.jpg" alt="Kỷ niệm" class="col-span-2 w-full object-cover rounded-xl polaroid-effect">
+          
+          <img src="img/Untitled-3.jpg" alt="Kỷ niệm" class="w-full object-cover rounded-xl polaroid-effect">
+          <img src="img/keke.jpg" alt="Kỷ niệm" class="w-full object-cover rounded-xl polaroid-effect">
         </div>
-        <h2 class="text-4xl text-center text-pink-600 block mt-14 mb-5" style="font-family: 'Great Vibes'">Mình lại ở về với nhau</h2>
+        <h2 class="text-4xl text-center text-pink-600 block mt-4 mb-5" style="font-family: 'Great Vibes'">Mình lại ở về với nhau</h2>
         <p class="text-gray-700 text-lg leading-relaxed mb-6">
             Em đã cho anh 1 cơ hội được thay đổi, anh thấy hạnh phúc và trân trọng em hơn bao giờ hết, anh thấy vui vì ba mẹ anh nhìn nhận em rất ưng, em thì lễ phép với ba mẹ anh. Em vào Sài Gòn ở với anh, khoảng thời gian này mình đã gần như là ở với nhau mà không hề phát sinh điều gì xấu, anh hạnh phúc lắm
         </p>
@@ -274,48 +280,81 @@
       </div>
     </div>
   </section>
-  <!-- Interactive Timeline -->
-  <section class="py-16 px-4 bg-white">
-    <div class="max-w-2xl mx-auto relative">
-      <div class="absolute left-1/2 w-1 bg-pink-200 h-full transform -translate-x-1/2"></div>
-      
+  
+  <section class="py-16 px-4 bg-white" style="background: url('https://images-wixmp-ed30a86b8c4ca887773594c2.wixmp.com/f/a5755734-d63b-4e8a-9ad4-e4b375c9db0b/de8w6ix-0178a89c-f7ed-4c1b-bad5-e3a476aa85da.jpg/v1/fill/w_1280,h_720,q_75,strp/kawaii_tree_leafs_wallpaper_by_greentea45_de8w6ix-fullview.jpg?token=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJ1cm46YXBwOjdlMGQxODg5ODIyNjQzNzNhNWYwZDQxNWVhMGQyNmUwIiwiaXNzIjoidXJuOmFwcDo3ZTBkMTg4OTgyMjY0MzczYTVmMGQ0MTVlYTBkMjZlMCIsIm9iaiI6W1t7ImhlaWdodCI6Ijw9NzIwIiwicGF0aCI6IlwvZlwvYTU3NTU3MzQtZDYzYi00ZThhLTlhZDQtZTRiMzc1YzlkYjBiXC9kZTh3Nml4LTAxNzhhODljLWY3ZWQtNGMxYi1iYWQ1LWUzYTQ3NmFhODVkYS5qcGciLCJ3aWR0aCI6Ijw9MTI4MCJ9XV0sImF1ZCI6WyJ1cm46c2VydmljZTppbWFnZS5vcGVyYXRpb25zIl19.P18WVoCqED82tEi9Xzq77P-B4_qh1Xj8cdrKB9bdDqs') no-repeat center/cover;">
+    <div class="max-w-2xl mx-auto relative flex flex-wrap justify-center">
+      <h1  class="w-full font-bold text-4xl text-center mb-5 inline-block p-3 rounded-lg shadow-lg text-[#e60175] bg-white" style="font-family: 'Great Vibes', cursive; ">Những ngày ko còn gọi nhau là người yêu</h1>
+      <div class="flex space-x-4 w-full mx-auto justify-center">
+        <div class="flip-clock">
+            <div style="line-height: 0%;" class="p-2 text-xs font-semibold text-[#e60175]">Ngày</div>
+            <div id="days" class="number">00</div>
+        </div>
+        <div class="flip-clock">
+            <div  style="line-height: 0%;" class="p-2 text-xs font-semibold text-[#e60175]">Giờ</div>
+            <div id="hours" class="number">00</div>
+        </div>
+        <div class="flip-clock">
+            <div  style="line-height: 0%;" class="p-2 text-xs font-semibold text-[#e60175]">Phút</div>
+            <div id="minutes" class="number">00</div>
+        </div>
+        <div class="flip-clock">
+            <div  style="line-height: 0%;" class="p-2 text-xs font-semibold text-[#e60175]">Giây</div>
+            <div id="seconds" class="number">00</div>
+        </div>
+    </div>
       <!-- Timeline Item -->
       <div class="mb-12 relative z-10">
         <div class="bg-pink-600 w-8 h-8 rounded-full absolute left-1/2 -translate-x-1/2"><img src="" alt=""></div>
         <div class="mt-12 bg-white p-6 rounded-xl shadow-lg border border-pink-100">
           <h3 class="text-2xl font-bold text-pink-600 mb-2">Em là người quan trọng nhất trong trái tim này</h3>
-          <p class="text-gray-600">Hãy quay trở về bên anh nhé</p>
+          <p class="text-pink-200">Hãy quay trở về bên anh nhé</p>
         </div>
       </div>
 
       <!-- Add more timeline items here -->
     </div>
   </section>
-  <section class="py-8 px-4 bg-gradient-to-r  from-pink-300 to-purple-400">
-    <div class="max-w-4xl mx-auto grid grid-cols-2 gap-4">
-
-      <div class="overflow-hidden rounded-lg shadow-xl">
-        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/387350216_2110359989302174_5550403181883530430_n.jpg" alt="Kỷ niệm 1">
+  <section class="py-12 px-4 bg-gradient-to-r from-pink-100 to-pink-200">
+    <div class="max-w-6xl mx-auto grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+      
+      <!-- Feature image - spans 2 columns -->
+      <div class="md:col-span-2 row-span-2 relative group overflow-hidden rounded-2xl shadow-2xl hover:shadow-2xl transition-all duration-500">
+        <img class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" src="img/387350216_2110359989302174_5550403181883530430_n.jpg" alt="Kỷ niệm 1">
+        <div class="absolute inset-0 bg-gradient-to-t from-black/60 to-transparent flex items-end p-6 opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <h3 class="text-2xl font-bold text-white">Những khoảnh khắc đáng nhớ</h3>
+        </div>
       </div>
-      <div class="overflow-hidden rounded-lg shadow-xl">
-        
-        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/texe.jpg" alt="Kỷ niệm 4">
+  
+      <!-- Image with rotate effect -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500">
+        <img class="w-full h-48 md:h-64 object-cover transform group-hover:scale-110 group-hover:-rotate-2 transition duration-700" src="img/texe.jpg" alt="Kỷ niệm 4">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/30 to-pink-400/30"></div>
       </div>
-      <div class="overflow-hidden rounded-lg shadow-xl">
-        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/hoa2.jpg" alt="Kỷ niệm 3">
+  
+      <!-- Vertical image -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 row-span-2">
+        <img class="w-full h-full object-cover transform group-hover:scale-105 transition duration-700" src="img/hoa2.jpg" alt="Kỷ niệm 3">
+        <div class="absolute inset-0 flex items-center justify-center opacity-0 group-hover:opacity-100 transition-opacity duration-500">
+          <span class="text-white text-lg font-semibold bg-black/50 px-4 py-2 rounded-full">Tình yêu tỏa sáng</span>
+        </div>
       </div>
-      <div class="overflow-hidden rounded-lg shadow-xl">
-        <img class="w-full h-full object-cover transform hover:scale-105 transition duration-500" src="img/trasua.jpg" alt="Kỷ niệm 2">
+  
+      <!-- Image with frame effect -->
+      <div class="relative group overflow-hidden rounded-2xl shadow-xl hover:shadow-2xl transition-all duration-500 md:col-span-2">
+        <img class="w-full h-48 md:h-64 object-cover transform group-hover:scale-105 transition duration-700" src="img/trasua.jpg" alt="Kỷ niệm 2">
+        <div class="absolute inset-0 border-4 border-white/30 transform group-hover:scale-95 transition duration-700"></div>
       </div>
+  
     </div>
-  </section>
-  <!-- Footer -->
-  <footer class="py-12 bg-gradient-to-r from-pink-600 to-purple-600 text-white">
-    <div class="max-w-4xl mx-auto text-center">
+    <div class="max-w-4xl mx-auto text-center my-4">
       <h3 class="text-3xl font-bold mb-4" style="font-family: 'Great Vibes'">Mãi Yêu Em</h3>
       <p class="opacity-90">Dù thế giới có thay đổi, trái tim này vẫn thuộc về em</p>
     </div>
-  </footer>
+  </section>
+  <!-- Footer -->
+  <!-- <footer class="py-12 bg-gradient-to-r from-pink-200 to-purple-200 text-black">
+   
+  </footer> -->
   <script>
     console.log('love u');
     // Lấy tất cả phần tử có class 'scroll-animation'
@@ -347,8 +386,9 @@
           document.getElementById('btn1').classList.add('hidden');  
           document.getElementById('img1').classList.add('hidden');  
           document.getElementById('type1').classList.remove('hidden'); 
-            setInterval(() => {document.getElementById('popup').classList.add('hidden');  }, 6000);
-            
+          setInterval(() => { document.getElementById('mess').innerHTML='Bật âm thanh lên nha';  }, 6000);
+            setInterval(() => {document.getElementById('popup').classList.add('hidden');  }, 12000);
+           
         });
 
         // Sự kiện khi nhấn nút No
@@ -360,7 +400,33 @@
             yesButton.style.transform = `scale(${scaleFactor})`; // Áp dụng tỷ lệ mới
             noButton.style.transform = `scale(${scaleFactor2})`;
         });
-   
+    function updateCountdown() {
+    const breakupDate = new Date("2025-02-04T00:00:00Z"); 
+    const now = new Date();
+
+    const diff = now.getTime() - breakupDate.getTime();
+    if (diff < 0) {
+        document.getElementById("days").textContent = "00";
+        document.getElementById("hours").textContent = "00";
+        document.getElementById("minutes").textContent = "00";
+        document.getElementById("seconds").textContent = "00";
+        return;
+    }
+
+    const days = Math.floor(diff / (1000 * 60 * 60 * 24));
+    const hours = Math.floor((diff / (1000 * 60 * 60)) % 24);
+    const minutes = Math.floor((diff / (1000 * 60)) % 60);
+    const seconds = Math.floor((diff / 1000) % 60);
+
+    document.getElementById("days").textContent = String(days).padStart(2, '0');
+    document.getElementById("hours").textContent = String(hours).padStart(2, '0');
+    document.getElementById("minutes").textContent = String(minutes).padStart(2, '0');
+    document.getElementById("seconds").textContent = String(seconds).padStart(2, '0');
+}
+
+setInterval(updateCountdown, 1000);
+updateCountdown();
+
   </script>
   
 </body>
